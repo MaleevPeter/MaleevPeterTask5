@@ -16,7 +16,7 @@ public abstract class Motorcycle implements Movable {
   public String dateOfIssue = dateFormat.format(date);
 
 
-  protected Motorcycle(String color, String name, int number, int dateOfIssue, Brand brand) {
+  protected Motorcycle(String color, String name, int number, String dateOfIssue, Brand brand) {
     this.color = color;
     this.name = name;
     this.number = number;
