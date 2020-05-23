@@ -8,7 +8,7 @@ public class Chopper extends Motorcycle {
   public int fuelConsuption;
   protected int rudderHeight;
   protected int steeringAngle;
-  protected Chopper(String color, String name, int number, int dateOfIssue,
+  protected Chopper(String color, String name, int number, String dateOfIssue,
       Brand brand, int rudderHeight, int steeringAngle) {
     super(color, name, number, dateOfIssue, brand);
     this.rudderHeight = rudderHeight;

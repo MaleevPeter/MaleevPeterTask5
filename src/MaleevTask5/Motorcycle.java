@@ -21,8 +21,9 @@ public abstract class Motorcycle implements Movable {
     this.name = name;
     this.number = number;
     this.dateOfIssue = dateOfIssue;
-
+    System.out.println(dateOfIssue);
   }
+
 
   protected boolean isGoing() {
     return isGoing;
