@@ -1,16 +1,23 @@
-package MaleevTask5;
+package MaleevTask5.MotorcycleShop;
+
+import MaleevTask5.Brand;
+import MaleevTask5.MotorcycleShop.Motorcycle;
+import java.util.Date;
 
 public class Chopper extends Motorcycle {
 
 
-  public int speed;
-  public int gearNumber;
-  public int fuelConsuption;
   protected int rudderHeight;
   protected int steeringAngle;
-  protected Chopper(String color, String name, int number, String dateOfIssue,
-      Brand brand, int rudderHeight, int steeringAngle) {
-    super(color, name, number, dateOfIssue, brand);
+  protected int speed;
+  protected int gearNumber;
+  protected int fuelConsuption;
+
+
+
+  public Chopper(String color, String name, int number, Date dateOfIssue,
+      Brand brand,int price, int rudderHeight, int steeringAngle) {
+    super(color, name, number, dateOfIssue, brand,price);
     this.rudderHeight = rudderHeight;
     this.steeringAngle = steeringAngle;
   }
@@ -26,7 +33,7 @@ public class Chopper extends Motorcycle {
     System.out.println("Я тяжёлый, поэтому останавливаюсь долго");
   }
 
-  public int getRudderHeight() {
+    public int getRudderHeight() {
     return rudderHeight;
   }
 
@@ -80,4 +87,14 @@ public class Chopper extends Motorcycle {
     }
   }
 
+  @Override
+  public String toString() {
+    return super.toString() + "; Высота руля - " + this.rudderHeight + "; Угол наклона руля - "
+        + this.steeringAngle;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    return super.equals(obj);
+  }
 }

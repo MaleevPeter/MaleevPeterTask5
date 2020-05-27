@@ -8,14 +8,27 @@ public enum Brand {
   BMW("Германия", 1923, "Марк Фриц");
 
 
-  public String countryOfOrigin;
-  public int yearOfFoundation;
-  public String founder;
+  private String countryOfOrigin;
+  private int yearOfFoundation;
+  private String founder;
 
   Brand(String countryOfOrigin, int yearOfFoundation, String founder) {
     this.countryOfOrigin = countryOfOrigin;
     this.founder = founder;
     this.yearOfFoundation = yearOfFoundation;
   }
+
+  public String getCountryOfOrigin() {
+    return countryOfOrigin;
+  }
+
+  public int getYearOfFoundation() {
+    return yearOfFoundation;
+  }
+
+  public String getFounder() {
+    return founder;
+  }
+
 
 }

@@ -1,15 +1,19 @@
-package MaleevTask5;
+package MaleevTask5.MotorcycleShop;
+
+import MaleevTask5.Brand;
+import MaleevTask5.MotorcycleShop.Motorcycle;
+import java.util.Date;
 
 public class Enduro extends Motorcycle {
 
-  public int treadHeight = 5;
-  public int heightDifference;
+  protected int treadHeight;
+  protected int heightDifference;
   protected int increasedGroundClearance;
   protected int engineVolume;
 
 
-  public Enduro(String color, String name, int number, String dateOfIssue, Brand brand, int engineVolume, int increasedGroundClearance) {
-    super(color, name, number, dateOfIssue, brand);
+  public Enduro(String color, String name, int number, Date dateOfIssue, Brand brand,int price, int engineVolume, int increasedGroundClearance) {
+    super(color, name, number, dateOfIssue, brand,price);
     this.engineVolume=engineVolume;
     this.increasedGroundClearance=increasedGroundClearance;
   }
@@ -40,7 +44,8 @@ public class Enduro extends Motorcycle {
     this.engineVolume = engineVolume;
   }
 
-  public void printTireReplacementmessage() {
+   public void printTireReplacementmessage() {
+      int treadHeight = 5;
     while (treadHeight > 0) {
       if (treadHeight <= 2) {
         System.out.println("Пора заменить шины");
@@ -53,5 +58,15 @@ public class Enduro extends Motorcycle {
     if (heightDifference > 30) {
       System.out.println("Необходимо включить пневмоподвеску");
     }
+  }
+
+  @Override
+  public String toString() {
+    return super.toString()+"; Объём двигателя - "+this.engineVolume+"; Увеличеный клиренс - "+this.increasedGroundClearance;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    return super.equals(obj);
   }
 }
