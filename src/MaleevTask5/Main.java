@@ -8,7 +8,9 @@ import java.util.Date;
 
 public class Main {
 
-  public static void main(String[] args) {
+  public static <T> void main(String[] args) {
+
+    final int length=4;
 
     Calendar calendar = Calendar.getInstance();
     Date date = calendar.getTime();
@@ -31,6 +33,15 @@ public class Main {
 
     Scooter scooter = new Scooter(5, 150, Brand.YAMAHA, 675);
     System.out.println(scooter);
+
+    Store<T>products=new Store<T>(4);
+  products.set(0, (T) enduro);
+    products.set(1, (T) secondEnduro);
+    products.set(2, (T) chopper);
+    products.set(3, (T) secondChopper);
+System.out.println(products);
+
+    products.printProducts();
 
 
   }
