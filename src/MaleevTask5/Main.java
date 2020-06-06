@@ -2,13 +2,14 @@ package MaleevTask5;
 
 import MaleevTask5.MotorcycleShop.Chopper;
 import MaleevTask5.MotorcycleShop.Enduro;
+import MaleevTask5.MotorcycleShop.Motorcycle;
 import MaleevTask5.MotorcycleShop.Store;
 import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
 
-  public static <T> void main(String[] args) {
+  public static <T extends Motorcycle> void main(String[] args) {
 
     final int length=4;
 
@@ -42,6 +43,7 @@ public class Main {
 System.out.println(products);
 
     products.printProducts();
+products.purchase(1,3000);
 
 
   }
